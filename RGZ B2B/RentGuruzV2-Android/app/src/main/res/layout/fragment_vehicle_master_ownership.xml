@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.galadariauto.model.display.ThemeColors" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/next"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                app:UiColor="@{UiColor}"
+                layout="@layout/row_header"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/curve_box">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginTop="1dp"
+                    style="@style/textfont"
+                    android:text="Ownership Details"
+                    android:textColor="@color/textlightcolor"
+                    android:textSize="17dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/txtBlack"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/selectedlocation"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5sdp"
+            android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:theme="@style/texttheme"
+                    android:layout_weight="5"
+                    android:text="Name Of The Fleet Owner"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginTop="0dp"
+                    style="@style/edittextheader"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="end|center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ToggleButton
+                        android:id="@+id/isActive"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/toggle_selector_green"
+                        android:clickable="true"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available Online"
+                        android:theme="@style/texttheme"
+                        android:layout_marginStart="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/companyname"
+                style="@style/edittext"
+                android:hint="Select Fleet Owner Table"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/edt_CustUnitNo"/>
+
+
+            <TextView
+                android:text="@string/email"
+                style="@style/edittextheader" />
+
+            <EditText
+                android:id="@+id/emailid"
+                style="@style/edittext"
+                android:hint="@string/enter_an_email"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/edt_CustUnitNo"/>
+
+            <TextView
+                android:text="@string/telephone"
+                style="@style/edittextheader" />
+
+            <EditText
+                android:id="@+id/comnumber"
+                style="@style/edittext"
+                android:hint="@string/enter_phone_number"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/edt_CustUnitNo"/>
+
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/txtBlack"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="15dp"
+                android:text="Vendor Details"
+                android:textSize="@dimen/_12ssp"
+                style="@style/textfont"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/txtBlack"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="15dp">
+            <TextView
+                android:text="Select Vendor"
+                style="@style/edittextheader" />
+
+            <Spinner
+                android:id="@+id/selectvendor"
+                android:layout_width="match_parent"
+                style="@style/spinner"
+                android:theme="@style/loginedit"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:windowSoftInputMode="stateHidden"
+                />
+
+           <!-- <EditText
+                style="@style/edittext"
+                android:hint="Name Of The Vendor"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@id/edt_CustUnitNo"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_full_curve_box"
+                android:backgroundTint="@{Color.parseColor(UiColor.additionalcolor)}"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="6dp"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="35">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="65"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/texttheme"
+                                android:text=""
+                                android:textSize="@dimen/sixteen" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <!--<ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginTop="2dp"
+                                    android:src="@drawable/ic_call_icon_small"
+                                    app:tint="@color/black" />-->
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@drawable/curve_single_text222"
+                                    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/textfont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/_minus2sdp"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="E"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/tetext"
+                                        android:textStyle="bold" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <TextView
+
+                                    android:id="@+id/email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:theme="@style/texttheme"
+                                    android:text=""
+                                    android:textColor="@color/textlightcolor"
+                                    android:textSize="@dimen/twelve" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@drawable/curve_single_text222"
+                                    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/textfont"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/_minus2sdp"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="T"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/tetext"
+                                        android:textStyle="bold" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <TextView
+                                    android:id="@+id/number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:theme="@style/texttheme"
+                                    android:text=""
+                                    android:textColor="@color/textlightcolor"
+                                    android:textSize="@dimen/twelve" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_marginTop="2dp"
+                                    android:background="@drawable/curve_single_text222"
+                                    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="1dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_black_location_pin"
+                                    app:tint="@color/white" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <TextView
+                                    android:id="@+id/address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:theme="@style/texttheme"
+                                    android:text=""
+                                    android:textColor="@color/textlightcolor"
+                                    android:textSize="@dimen/twelve" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/txtBlack"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="15dp"
+                android:text="Purchase Details"
+                android:textSize="@dimen/_12ssp"
+                style="@style/textfont"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/txtBlack"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Purchase By"
+                        style="@style/edittextheader" />
+
+                    <RadioGroup
+                        android:id="@+id/purchaseoption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/cashpurchase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="6dp"
+                            android:buttonTint="@{Color.parseColor(UiColor.primary)}"
+                            android:text=" Cash "
+                            android:textColor="@color/textlightcolor" />
+
+                        <RadioButton
+                            android:id="@+id/financepurchase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="6dp"
+                            android:buttonTint="@{Color.parseColor(UiColor.primary)}"
+                            android:text=" Finance "
+                            android:textColor="@color/textlightcolor" />
+
+                        <RadioButton
+                            android:id="@+id/leasepurchase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="6dp"
+                            android:buttonTint="@{Color.parseColor(UiColor.primary)}"
+                            android:text=" Lease "
+                            android:textColor="@color/textlightcolor" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+
+                <include
+                    android:id="@+id/cash"
+                    app:UiColor="@{UiColor}"
+                    layout="@layout/vehiclecash"/>
+
+                <include android:id="@+id/finance"
+                    app:UiColor="@{UiColor}"
+                    layout="@layout/vehiclefinancelease"/>
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="Per Tax Amount"
+                            style="@style/edittextheader" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_weight="1"
+                            android:text="Paid By"
+                            style="@style/edittextheader"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/curve_white333"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            &lt;!&ndash;<TextView
+                                android:id="@+id/amountPayable"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="60"
+                                android:background="@null"
+                                android:gravity="center|start"
+                                android:hint="123"
+                                android:inputType="numberDecimal"
+                                android:padding="2dp"
+                                android:layout_marginStart="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textlightcolor"
+                                android:textSize="@dimen/fifteen"
+                                android:theme="@style/texttheme" />&ndash;&gt;
+
+                            <EditText
+                                android:id="@+id/edt_CustUnitNo"
+                                android:layout_width="0dp"
+                                style="@style/edittext"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="60"
+                                android:hint="Per Tax Amount"
+                                android:singleLine="true"
+                                android:inputType="number"
+                                android:focusableInTouchMode="true"
+                                android:background="@null"
+                                android:focusable="true"
+                                android:imeOptions="actionNext"
+                                android:nextFocusLeft="@id/edt_CustZipCode"
+                                />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_weight="40"
+                                android:gravity="end">
+
+                                <TextView
+                                    android:id="@+id/fcurrency2"
+                                    style="@style/btntext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_weight="40"
+                                    android:background="@drawable/curve_white222"
+                                    android:backgroundTint="@color/green"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:paddingHorizontal="5dp"
+                                    android:text="USD $"
+                                    android:textColor="@color/btntext"
+                                    android:textSize="@dimen/twenty"
+                                    android:theme="@style/texttheme" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+
+                        <EditText
+                            android:id="@+id/edt_CustZipCode"
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:hint="Paid By"
+                            android:gravity="center_vertical"
+                            android:textAlignment="gravity"
+                            android:background="@drawable/ic_rectangle_box_2152"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:imeOptions="actionDone"
+                            android:nextFocusLeft="@id/sp_Countrylist"/>
+
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Date Of Payment"
+                        style="@style/edittextheader" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:text="Amount Paid Monthly"
+                        style="@style/edittextheader"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/ISSueDate"
+                        android:layout_width="0dp"
+                        style="@style/datetext"
+                        android:background="@drawable/ic_rectangle_box_2152"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/mm_dd_yyyy" />
+
+                    &lt;!&ndash;<EditText
+                        android:layout_width="0dp"
+                        style="@style/edittext"
+                        android:layout_weight="1"
+                        android:hint="Date Of Payment"
+                        android:focusableInTouchMode="true"
+                        android:background="@drawable/ic_rectangle_box_2152"
+                        android:focusable="true"
+                        android:imeOptions="actionNext"
+                        android:nextFocusLeft="@id/edt_CustZipCode"
+                        />&ndash;&gt;
+
+                  &lt;!&ndash;  <EditText
+                        android:layout_width="0dp"
+                        style="@style/edittext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:hint="Amount Paid Monthly"
+                        android:gravity="center_vertical"
+                        android:textAlignment="gravity"
+                        android:background="@drawable/ic_rectangle_box_2152"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:imeOptions="actionDone"
+                        android:nextFocusLeft="@id/sp_Countrylist"/>&ndash;&gt;
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/curve_white333"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+
+                        <EditText
+                            android:id="@+id/monthlypaid"
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="60"
+                            android:hint="Amount Paid Monthly"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:imeOptions="actionNext"
+
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="40"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/fcurrency1"
+                                style="@style/btntext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_weight="40"
+                                android:background="@drawable/curve_white222"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:paddingHorizontal="5dp"
+                                android:text="USD $"
+                                android:textColor="@color/btntext"
+                                android:textSize="@dimen/twenty"
+                                android:theme="@style/texttheme" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Annual Kms Allowed"
+                        style="@style/edittextheader" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:text="Down Payment"
+                        style="@style/edittextheader"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/curve_white333"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+
+                        <EditText
+                            android:id="@+id/kmsallowed"
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="60"
+                            android:hint="Annual Kms Allowed"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:imeOptions="actionNext"
+
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="40"
+                            android:gravity="end">
+
+                            <TextView
+                                style="@style/btntext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_weight="40"
+                                android:background="@drawable/curve_white222"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:paddingHorizontal="5dp"
+                                android:text="Kms"
+                                android:textColor="@color/btntext"
+                                android:textSize="@dimen/twenty"
+                                android:theme="@style/texttheme" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/curve_white333"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+
+
+                        <EditText
+                            android:id="@+id/downpayment"
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="60"
+                            android:hint="Down Payment"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:imeOptions="actionNext"
+
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="40"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/fcurrency"
+                                style="@style/btntext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_weight="40"
+                                android:background="@drawable/curve_white222"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:paddingHorizontal="5dp"
+                                android:text="USD $"
+                                android:textColor="@color/btntext"
+                                android:textSize="@dimen/twenty"
+                                android:theme="@style/texttheme" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Tax Amount"
+                        style="@style/edittextheader" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:text="Cheque Number"
+                        style="@style/edittextheader"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/curve_white333"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        &lt;!&ndash;<TextView
+                            android:id="@+id/amountPayable"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:background="@null"
+                            android:gravity="center|start"
+                            android:hint="123"
+                            android:inputType="numberDecimal"
+                            android:padding="2dp"
+                            android:layout_marginStart="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textlightcolor"
+                            android:textSize="@dimen/fifteen"
+                            android:theme="@style/texttheme" />&ndash;&gt;
+
+                        <EditText
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="60"
+                            android:hint="Tax Amount"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:imeOptions="actionNext"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="40"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/fcurrency3"
+                                style="@style/btntext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_weight="40"
+                                android:background="@drawable/curve_white222"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:paddingHorizontal="5dp"
+                                android:text="USD $"
+                                android:textColor="@color/btntext"
+                                android:textSize="@dimen/twenty"
+                                android:theme="@style/texttheme" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        style="@style/edittext"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:hint="Cheque Number"
+                        android:gravity="center_vertical"
+                        android:textAlignment="gravity"
+                        android:background="@drawable/ic_rectangle_box_2152"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:imeOptions="actionDone"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="Bank Name"
+                        style="@style/edittextheader" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_weight="1"
+                        android:text="Total Amount"
+                        style="@style/edittextheader"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+
+                    <EditText
+                        android:layout_width="0dp"
+                        style="@style/edittext"
+
+                        android:layout_weight="1"
+                        android:hint="Bank Name"
+                        android:gravity="center_vertical"
+                        android:textAlignment="gravity"
+                        android:background="@drawable/ic_rectangle_box_2152"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:imeOptions="actionDone"/>
+
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/curve_white333"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        &lt;!&ndash;<TextView
+                            android:id="@+id/amountPayable"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60"
+                            android:background="@null"
+                            android:gravity="center|start"
+                            android:hint="123"
+                            android:inputType="numberDecimal"
+                            android:padding="2dp"
+                            android:layout_marginStart="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textlightcolor"
+                            android:textSize="@dimen/fifteen"
+                            android:theme="@style/texttheme" />&ndash;&gt;
+
+                        <EditText
+                            android:layout_width="0dp"
+                            style="@style/edittext"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="60"
+                            android:hint="Total Amount"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:imeOptions="actionNext"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="40"
+                            android:gravity="end">
+
+                            <TextView
+                                android:id="@+id/fcurrency4"
+                                style="@style/btntext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/curve_white222"
+                                android:backgroundTint="@color/green"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:paddingHorizontal="5dp"
+                                android:text="USD $"
+                                android:textColor="@color/btntext"
+                                android:textSize="@dimen/twenty"
+                                android:theme="@style/texttheme" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Approved By"
+                    style="@style/edittextheader"/>
+
+                <Spinner
+                    android:id="@+id/authorised"
+                    android:layout_width="match_parent"
+                    style="@style/spinner"
+                    android:theme="@style/loginedit"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:windowSoftInputMode="stateHidden"
+                    />
+
+                </LinearLayout>-->
+
+                </LinearLayout>
+
+
+
+       <!--     <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/white"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end">
+
+                    <TextView
+                        style="@style/fullbtn"
+                        android:text="@string/done"/>
+
+                   &lt;!&ndash; <TextView
+                        android:theme="@style/texttheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/done"
+                        android:textAllCaps="false"
+                        style="@style/btntext"
+                        android:textSize="@dimen/_15ssp" />&ndash;&gt;
+                </LinearLayout>
+            </LinearLayout>-->
+
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <TextView
+                    style="@style/fullbtn"
+                    android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+                    android:text="@string/save"/>
+
+                <!-- <TextView
+                     android:theme="@style/texttheme"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:gravity="center"
+                     android:text="@string/done"
+                     android:textAllCaps="false"
+                     style="@style/btntext"
+                     android:textSize="@dimen/_15ssp" />-->
+            </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

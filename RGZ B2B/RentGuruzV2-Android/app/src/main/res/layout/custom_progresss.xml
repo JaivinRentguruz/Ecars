@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <data>
+      <import type="android.graphics.Color"/>
+      <import type="androidx.core.content.ContextCompat" />
+
+      <variable
+          name="UiColor"
+          type="com.rentguruz.app.b2b.galadariauto.model.display.ThemeColors" />
+
+   </data>
+
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:indeterminateBehavior="repeat"
+    android:indeterminateTint="@{Color.parseColor(UiColor.primary)}"
+    android:indeterminateDrawable="@anim/loader">
+
+   <!-- <ProgressBar
+        android:id="@+id/fullProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:drawingCacheQuality="high"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@anim/loader"
+        android:visibility="visible" />-->
+</ProgressBar>
+</layout>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.galadariauto.model.display.ThemeColors" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/selectedlocation"
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+            <ImageView
+                android:id="@+id/homeImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="90dp"/>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/homeImage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-5dp"
+                android:layout_marginTop="-290dp"
+                android:layout_marginEnd="-5dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/ic_path_test"
+                android:backgroundTint="@color/hcurve" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginBottom="20dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/loc0"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:background="@drawable/ic_location_white_icon"
+                                        android:backgroundTint="@{Color.parseColor(UiColor.secondary)}" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/loc1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                             style="@style/textfont"
+                                            android:text=""
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:textSize="17dp" />
+
+                                        <TextView
+                                            android:id="@+id/loc2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                             style="@style/textfont"
+                                            android:text=""
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:textSize="11dp" />
+
+                                        <TextView
+                                            android:id="@+id/loc3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+
+                                             style="@style/textfont"
+                                            android:text=""
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:textSize="11dp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true">
+
+                                    <ImageView
+                                        android:id="@+id/icon"
+                                        android:layout_width="@dimen/icon"
+                                        android:layout_height="@dimen/icon"
+                                        android:adjustViewBounds="true"/>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="55dp"
+                                android:layout_height="50dp">
+
+                              <!--  <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/user_icon" />-->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/curve_single_text"
+                                    android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/f"
+                                        style="@style/textfont"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:layout_weight="1"
+                                        android:gravity="end|center"
+                                        android:text="A"
+                                        android:textColor="@{Color.parseColor(UiColor.secondaryfont)}"
+                                        android:textSize="@dimen/_20ssp"/>
+
+                                    <TextView
+                                        android:id="@+id/l"
+                                        style="@style/textfont"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="@dimen/_2sdp"
+                                        android:layout_weight="1"
+                                        android:gravity="start|center"
+                                        android:text="B"
+                                        android:textColor="@{Color.parseColor(UiColor.secondaryfont)}"
+                                        android:textSize="@dimen/_20ssp" />
+
+                                    <!-- <TextView
+                                         style="@style/textfont"
+                                         android:layout_width="0dp"
+                                         android:layout_height="match_parent"
+                                         android:layout_marginBottom="@dimen/_2sdp"
+                                         android:layout_weight="2"
+                                         android:gravity="center"
+                                         android:text="FL"
+                                         android:textColor="@color/white"
+                                         android:textSize="@dimen/_20ssp"
+                                         app:_cap="@{Customer.Fname}"
+                                         app:_caps="@{Customer.Lname}"
+                                         />-->
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                 style="@style/textfont"
+                                android:text="Welcome!"
+                                android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                                android:textSize="@dimen/_15ssp" />
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                 style="@style/textfont"
+                                android:text="Neeraj Kaneria"
+                                android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                                android:textSize="@dimen/_20ssp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="@dimen/_75sdp"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:gravity="end"
+                            android:layout_marginTop="50dp">
+
+                            <ImageView
+                                android:id="@+id/logo"
+                                android:src="@drawable/car_img_bc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
