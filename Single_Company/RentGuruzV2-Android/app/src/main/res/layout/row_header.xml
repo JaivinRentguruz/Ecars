@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.model.display.ThemeColors" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    android:id="@+id/headerlayout"
+    android:background="@color/selected_dot"
+    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/headertopmargin"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <RelativeLayout
+                        android:id="@+id/hsmap"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentStart="true"
+                        android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+                        android:background="@drawable/ic_chevron_left" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/screenHeader"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/_minus1sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:layout_weight="10"
+                        android:text=""
+                        android:textAllCaps="false"
+                        android:textColor="@{Color.parseColor(UiColor.primary)}"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+                        android:theme="@style/texttheme" />
+
+                    <TextView
+                        android:id="@+id/discard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_minus1sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/quicksand_regular"
+                        android:gravity="center_vertical"
+                        android:text="@string/discard"
+                        android:textAllCaps="false"
+                        android:textColor="@{Color.parseColor(UiColor.primary)}"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+                        android:theme="@style/texttheme" />
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/_minus1sdp"
+                        android:id="@+id/optionmenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:layout_toRightOf="@id/discard"
+                        android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+                        android:background="@drawable/ic_baseline_more_vert_24"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.model.display.ThemeColors" />
+    </data>
+<RelativeLayout
+    android:layout_width="@dimen/_150sdp"
+    android:layout_height="match_parent"
+
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="@color/selected_dot"
+        android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+        android:orientation="vertical">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/selected_dot"
+            android:paddingTop="@dimen/_70sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:backgroundTint="@{Color.parseColor(UiColor.secondary)}"
+            android:layout_gravity="center|center_horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/user_icon"
+                android:scaleType="fitXY"/>
+
+
+            <TextView
+                android:theme="@style/texttheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Neeraj \nKaneria"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textSize="20dp"
+                android:layout_marginStart="5dp"
+                style="@style/btntext"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@color/linecolor"
+                android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--  <ImageView
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:padding="@dimen/_2sdp"
+                      android:src="@drawable/ic_mail_icon" />
+-->
+
+                <LinearLayout
+                    android:id="@+id/esquare"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/curve_single_text22">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textfont"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_minus2sdp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="E"
+                        android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                        android:textSize="@dimen/_8ssp"  />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_EMailAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="@string/email"
+                    android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                    android:textSize="@dimen/_11ssp"
+                    android:theme="@style/texttheme" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <!-- <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:padding="@dimen/_2sdp"
+                     android:src="@drawable/ic_call_icon_small" />-->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/tsquare"
+                    android:background="@drawable/curve_single_text22">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/textfont"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_minus2sdp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="T"
+                        android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                        android:textSize="@dimen/_8ssp"  />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/txt_MobileNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textColor="@{Color.parseColor(UiColor.primaryfont)}"
+                    android:textSize="@dimen/_11ssp"
+                    android:text="@string/telephone"
+                    android:theme="@style/texttheme" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Special Offers"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="My Account"
+            android:theme="@style/texttheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="My Car"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Documents"
+            android:theme="@style/texttheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Shop Collection"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="FAQ"
+            android:theme="@style/texttheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Policy"
+            android:theme="@style/texttheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/terms_amp_conditions"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Open a Ticket"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Chat with us"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13ssp"
+            android:text="Sign out"
+            android:theme="@style/texttheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/linecolor"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"/>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

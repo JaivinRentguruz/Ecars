@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.model.display.ThemeColors" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@{Color.parseColor(UiColor.secondary)}"
+    android:background="@color/selected_dot">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/selectedlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        app:UiColor="@{UiColor}"
+        layout="@layout/row_header" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@drawable/curve_box_for_bronzplan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="20"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/bronze_icon"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="17"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:weightSum="3"
+                    android:layout_marginStart="@dimen/_minus30sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="17"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tier 1Plan"
+                            android:theme="@style/texttheme"
+                            android:textSize="@dimen/twenty_two"
+                            android:textColor="@color/TitleTextColor"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bronze"
+                            android:theme="@style/texttheme"
+                            android:textSize="@dimen/txt_font_size"
+                            android:textColor="@color/TitleTextColor"/>
+
+                    </LinearLayout>
+
+
+                    <!--<TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="See All \nAvailable \nVehicles"
+                        android:gravity="end"
+                        android:textSize="12dp"
+                        android:theme="@style/texttheme"
+                        android:textColor="@color/TitleTextColor"
+                        android:layout_weight="2"/>
+-->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/curve_box_for_bronzplan"
+                android:backgroundTint="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/carImageType"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Vehicle Options"
+                    android:textColor="@color/fontwhitebackground"
+                    android:textAllCaps="false"
+
+                    android:textSize="17dp"
+                    android:theme="@style/texttheme" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/textColorHint" />
+
+            <LinearLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp">
+
+                <include layout="@layout/three_carlist"/>
+
+             <!--   <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/carslist"
+                    android:scaleType="fitXY"/>-->
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:background="@drawable/curve_box_for_bronzplan"
+                    android:backgroundTint="@color/linne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="SUBSCRIPTION RATES INCLUDES"
+                        android:textColor="@color/fontwhitebackground"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_16ssp"
+                        android:theme="@style/texttheme" />
+
+                    <include layout="@layout/include_details"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:weightSum="2">
+
+                        <include
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            layout="@layout/qoptionone"/>
+
+
+                        <include
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            layout="@layout/qoptionone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Subject to Term &amp; Condition on Approved Credit"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:theme="@style/texttheme"
+                            android:textColor="@color/black"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:orientation="horizontal"
+                            android:layout_marginVertical="@dimen/_5sdp"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/curve_box_gray"
+                                android:orientation="vertical"
+                                android:backgroundTint="#BC9A91">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Special!!"
+                                    android:gravity="center"
+                                    android:textSize="14dp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:theme="@style/texttheme"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:text="First 2 Months On Us"
+                                    android:gravity="center"
+                                    android:textSize="11dp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:theme="@style/texttheme"
+                                    android:textColor="@color/black"/>
+
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Refundable DEPOSIT AED 500.00"
+                                    android:gravity="end"
+                                    android:textSize="14dp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:theme="@style/texttheme"
+                                    android:textColor="@color/black"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="A one time security deposit required to cover the  cost of
+any additional fees incur upon return, Including unpaid
+traffic and toll charges. "
+                                    android:maxLines="3"
+                                    android:gravity="end"
+                                    android:paddingEnd="2dp"
+                                    android:textSize="9dp"
+                                    android:justificationMode="inter_word"
+                                    android:theme="@style/texttheme"
+                                    android:textColor="@color/black"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

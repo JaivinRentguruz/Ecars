@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.graphics.Color" />
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.model.display.ThemeColors" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <com.sdsmdg.harjot.vectormaster.VectorMasterView
+            android:id="@+id/man"
+            android:layout_width="@dimen/_105sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:vector_src="@drawable/ic_topmarker" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_105sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="test"
+                android:textColor="@color/screen_bg_color"
+                android:textStyle="bold"
+                android:theme="@style/texttheme" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="test"
+                android:textColor="@color/screen_bg_color"
+                android:theme="@style/texttheme" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

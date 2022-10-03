@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.graphics.Color"/>
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="UiColor"
+            type="com.rentguruz.app.b2b.model.display.ThemeColors" />
+    </data>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_28sdp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:weightSum="100">
+
+    <CheckBox
+        android:id="@+id/chk_red"
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="match_parent"
+        android:button="@drawable/sharp_checkbox_drawable"
+        android:buttonTint="@{Color.parseColor(UiColor.primary)}"/>
+
+    <TextView
+        android:id="@+id/txt_chkOptionName"
+        android:layout_width="0dp"
+        android:layout_weight="65"
+        android:layout_height="match_parent"
+        android:text="Snow Brush"
+        android:gravity="center_vertical"
+        android:textColor="@color/txtBlack"
+        android:textSize="@dimen/_11ssp"
+        android:theme="@style/texttheme" />
+
+    <LinearLayout
+        android:id="@+id/withoutserial"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_weight="28"
+        android:orientation="horizontal"
+        android:background="@drawable/curve_white33"
+        android:backgroundTint="@color/MGrey"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:id="@+id/minus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:background="@drawable/curve_white22r"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+            android:layout_weight="20">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/minus_img"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="60">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="0"
+                android:textColor="@color/txtBlack"
+                android:textSize="@dimen/_11ssp"
+                android:theme="@style/texttheme" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/plus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:background="@drawable/curve_white22l"
+            android:backgroundTint="@{Color.parseColor(UiColor.primary)}"
+            android:layout_weight="20">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/pluse_img_2"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/withserial"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_weight="28"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+    <TextView
+        android:id="@+id/serial"
+        android:layout_width="match_parent"
+        android:layout_weight="28"
+        android:layout_height="match_parent"
+        android:text=""
+        android:gravity="center_vertical"
+        android:textColor="@color/txtBlack"
+        android:textSize="@dimen/_11ssp"
+        android:theme="@style/texttheme" />
+     </LinearLayout>
+</LinearLayout>
+</layout>
